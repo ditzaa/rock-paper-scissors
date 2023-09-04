@@ -1,3 +1,11 @@
+#main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20vh;
+}
+
 .roundContent{
     color: blue;
 }

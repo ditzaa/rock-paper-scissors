@@ -43,16 +43,24 @@ let computerPoints = 0;
 
 const container = document.querySelector('#main-container');
 
-//round-message container
-const roundContent = document.createElement('div');
-roundContent.classList.add('roundContent');
-container.appendChild(roundContent);
+//div user's choice
+const userChoiceContent = document.querySelector('#user-choice-div');
+container.appendChild(userChoiceContent);
+
+//div user's choice
+const computerChoiceContent = document.querySelector('#computer-choice-div');
+container.appendChild(computerChoiceContent);
 
 //result container
 const resultContent = document.createElement('div');
 resultContent.classList.add('resultContent');
 resultContent.textContent = userPoints.toString() + '-' + computerPoints.toString();
 container.appendChild(resultContent);
+
+//round-message container
+const roundContent = document.createElement('div');
+roundContent.classList.add('roundContent');
+container.appendChild(roundContent);
 
 //end-game message-container
 const endMessage = document.createElement('div');
@@ -61,7 +69,7 @@ endMessage.textContent ='Who is going to be the winner?';
 container.appendChild(endMessage);
 
 function winRound(){
-roundContent.textContent = 'You win!';
+    roundContent.textContent = 'You win!';
     userPoints++;
     resultContent.textContent = userPoints.toString() + '-' + computerPoints.toString();
 }
@@ -78,8 +86,6 @@ function endGame(){
     }
     else if(computerPoints == 5){
         endMessage.textContent = "You lost madafaka"
-    }else{
-        //endMessage.textContent ='Who is going to be the winner?';
     }
 
     userPoints = 0;
@@ -98,8 +104,10 @@ function checkEndGame(){
 
 const rockButton = document.querySelector('#rock-button');
 rockButton.addEventListener('click', () => {
-    //endMessage.textContent ='Who is going to be the winner?';
-    const roundResult = playRound("rock", getComputerChoice());
+    let computerChoice = getComputerChoice();
+    const roundResult = playRound("rock", computerChoice);
+    userChoiceContent.textContent = 'Your choice: Rock';
+    computerChoiceContent.textContent = "Computer's choice: " + computerChoice.toString();
     if(roundResult == 2){
         winRound();
     }else if(roundResult == 0){
@@ -113,8 +121,10 @@ rockButton.addEventListener('click', () => {
 
 const paperButton = document.querySelector('#paper-button');
 paperButton.addEventListener('click', () => {
-    //endMessage.textContent ='Who is going to be the winner?';
-    const roundResult = playRound("paper", getComputerChoice());
+    let computerChoice = getComputerChoice();
+    const roundResult = playRound("paper", computerChoice);
+    userChoiceContent.textContent = 'Your choice: Paper';
+    computerChoiceContent.textContent = "Computer's choice: " + computerChoice.toString();
     if(roundResult == 2){
         winRound();
     }else if(roundResult == 0){
@@ -128,8 +138,10 @@ paperButton.addEventListener('click', () => {
 
 const scissorsButton = document.querySelector('#scissors-button');
 scissorsButton.addEventListener('click', () => {
-    //endMessage.textContent ='Who is going to be the winner?';
-    const roundResult = playRound("scissors", getComputerChoice());
+    let computerChoice = getComputerChoice();
+    const roundResult = playRound("scissors", computerChoice);
+    userChoiceContent.textContent = 'Your choice: Scissors';
+    computerChoiceContent.textContent = "Computer's choice: " + computerChoice.toString();
     if(roundResult == 2){
         winRound();
     }else if(roundResult == 0){
