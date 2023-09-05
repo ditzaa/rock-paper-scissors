@@ -63,6 +63,7 @@ container.appendChild(resultContent);
 //round-message container
 const roundContent = document.createElement('div');
 roundContent.classList.add('roundContent');
+roundContent.textContent = 'No rounds played yet...';
 container.appendChild(roundContent);
 
 //end-game message-container
@@ -78,7 +79,7 @@ function winRound(){
 }
 
 function loseRound(){
-    roundContent.textContent = 'You lost';
+    roundContent.textContent = 'You lost!';
     computerPoints++;
     resultContent.textContent = userPoints.toString() + '-' + computerPoints.toString();
 }
