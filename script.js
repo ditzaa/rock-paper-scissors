@@ -51,6 +51,9 @@ container.appendChild(userChoiceContent);
 const computerChoiceContent = document.querySelector('#computer-choice-div');
 container.appendChild(computerChoiceContent);
 
+const userVsComputer = document.querySelector('#user-computer');
+container.appendChild(userVsComputer);
+
 //result container
 const resultContent = document.createElement('div');
 resultContent.classList.add('resultContent');
@@ -82,10 +85,10 @@ function loseRound(){
 
 function endGame(){
     if(userPoints == 5 ){
-        endMessage.textContent = "You won madafaka";
+        endMessage.textContent = "You won! Congrats!";
     }
     else if(computerPoints == 5){
-        endMessage.textContent = "You lost madafaka"
+        endMessage.textContent = "You lost! Such a shame..."
     }
 
     userPoints = 0;

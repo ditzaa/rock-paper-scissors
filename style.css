@@ -3,9 +3,36 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 20vh;
+    margin-top: 10vh;
 }
 
 .roundContent{
-    color: blue;
+}
+
+body{
+    background-color: #000080;
+    color: white;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+
+h1{
+    font-weight: 1000;
+    font-size:5vh;
+}
+
+.buttons-container{
+    margin-top: 2vh;
+}
+
+#rock-button, #paper-button, #scissors-button{
+    border-radius:5rem;
+    border: 0.3rem solid black; 
+    margin: 0 1vw; 
+}
+
+#rock-img, #paper-img, #scissors-image{
+    height: 23vh;
+    width: 23vh;
+    border-radius:5rem;
+    /* margin: 0 2vw; */
 }
