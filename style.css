@@ -39,7 +39,7 @@ h1{
     font-size: 2rem;
     background-color: #101010;
     border-radius:1rem;
-    border: 1px solid white;
+    border: 0.2rem solid white;
     padding: 1rem;
     margin-bottom: 3vh;
 }
@@ -47,19 +47,26 @@ h1{
 #user-choice-div, #computer-choice-div{
     font-size: 2rem;
     font-weight: 700;
+    margin-bottom: 1vh;
 }
 
 .resultContent{
     font-size: 2rem;
     background-color: #101010;
     border-radius:1rem;
-    border: 1px solid white;
+    border: 0.2rem solid white;
     padding: 1rem 3rem;
-    margin-bottom: 3vh;
+    margin: 2vh 0;
 }
 
-#user-computer{
+.endMessage{
     font-size: 2rem;
     font-weight: 700;
+    border-radius:1rem;
+    border: 0.2rem solid white;
+    padding: 1rem 3rem;
+    background-color: #0066b2;
 }
+
+
 

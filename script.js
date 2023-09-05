@@ -51,8 +51,7 @@ container.appendChild(userChoiceContent);
 const computerChoiceContent = document.querySelector('#computer-choice-div');
 container.appendChild(computerChoiceContent);
 
-const userVsComputer = document.querySelector('#user-computer');
-container.appendChild(userVsComputer);
+
 
 //result container
 const resultContent = document.createElement('div');
