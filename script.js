@@ -75,12 +75,14 @@ function winRound(){
     roundContent.textContent = 'You win!';
     userPoints++;
     resultContent.textContent = userPoints.toString() + '-' + computerPoints.toString();
+    roundContent.style.cssText = "background-color: #009000;"
 }
 
 function loseRound(){
     roundContent.textContent = 'You lost!';
     computerPoints++;
     resultContent.textContent = userPoints.toString() + '-' + computerPoints.toString();
+    roundContent.style.cssText = "background-color: #D2122E;"
 }
 
 function endGame(){
@@ -117,6 +119,7 @@ rockButton.addEventListener('click', () => {
         loseRound();
     }else{
         roundContent.textContent = "It's a draw!";
+        roundContent.style.cssText = "background-color: #101010;"
     }
 
     checkEndGame();
@@ -134,6 +137,7 @@ paperButton.addEventListener('click', () => {
         loseRound();
     }else{
         roundContent.textContent = "It's a draw!";
+        roundContent.style.cssText = "background-color: #101010;"
     }
 
     checkEndGame();
@@ -151,6 +155,7 @@ scissorsButton.addEventListener('click', () => {
         loseRound();
     }else{
         roundContent.textContent = "It's a draw!";
+        roundContent.style.cssText = "background-color: #101010;"
     }
 
     checkEndGame();
